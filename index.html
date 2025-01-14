@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preventivo</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Bool Factory</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Servizi</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contatti</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container-fluid px-3 ms-md-5">
+    <div class="row g-0">
+        <div class="col-12 col-md-6 ">
+            <!-- Titolo -->
+            <h1> Richiesta Preventivo </h1>
+            <!-- P -->
+            <p>Compila il form per richiedere un preventivo per i nostri servizi di sviluppo.</p>
+            <!-- Form -->
+            <form>
+                <div class="mb-3">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="nome">
+                </div>
+                <div class="mb-3">
+                    <label for="cognome" class="form-label">Cognome</label>
+                    <input type="text" class="form-control" id="cognome">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+                <div class="mb-3">
+                    <label for="lavoro" class="form-label">Tipo di lavoro</label><br>
+                    <select class="form-select" id="lavoro" name="lavoro">
+                        <option value="selezione" selected>Seleziona il tipo di lavoro</option>
+                        <option value="sviluppo backend">Sviluppo Backend</option>
+                        <option value="sviluppo frontend">Sviluppo Frontend</option>
+                        <option value="analisi progettuale">Analisi Progettuale</option>
+                    </select>
+                </div>
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="textArea">Textarea con Bootstrap 5</label>
+                    <textarea class="form-control" id="textArea" rows="3"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="codice" class="form-label">Codice Promozionale (opzionale)</label>
+                    <input type="text" class="form-control" id="codice">
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="privacy">
+                    <label class="form-check-label" for="privacy">Accetto la Privacy Policy</label>
+                </div>
+                <div class="row justify-content-around align-items-center mt-4 flex-column flex-md-row">
+                    <!-- Bottone per calcolare il preventivo -->
+                    <div class="col-auto text-center mb-3 mb-md-0">
+                        <button id="calcola-preventivo" class="btn btn-primary">
+                            Calcola preventivo
+                        </button>
+                    </div>
+                    <!-- Sezione per il prezzo finale -->
+                    <div class="col-auto text-center mt-3 mt-md-0 mb-4">
+                        <span class="fw-bold d-block">Prezzo finale</span>
+                        <p id="prezzo-finale" class="fs-4 mb-0">€ 0,00</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Box Contatti -->
+        <div class="col-12 col-md-6 col-sm-auto mx-auto d-flex flex-column align-items-center">
+            <!-- Box 300x200 -->
+            <div class="box">300 X 200</div>
+            <div class="box1 border">
+                <!-- Titolo -->
+                <h5>I nostri contatti</h5>
+                <!-- P -->
+                <p>Se hai bisogno di aiuto puoi contattarci:</p>
+            </div>
+            <div class="border-end border-start box1">
+                <!-- Email -->
+                <span>help@boolfactory.test</span>
+            </div>
+            <div class="border box1">
+                <!-- Numero -->
+                <span>+1122334455</span>
+            </div>
+            <div class="border-end border-start border-bottom box1">
+                <!-- Link per Help Desk -->
+                <a href="">Help Desk</a>
+            </div>
+        </div>
+    </div>
+</main>
+
+    <footer class="bg-dark text-white text-center py-3 fixed-bottom ">
+        <p class="m-0">© 2024 - Tutti i diritti riservati</p>
+    </footer>
+    <script src="./js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
